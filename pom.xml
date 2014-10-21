@@ -7,7 +7,7 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>1174-SNAPSHOT</version>
+    <version>6909e38-SNAPSHOT</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
@@ -33,61 +33,61 @@
         <url>http://github.com/webjars/blockly</url>
         <connection>scm:git:https://github.com/webjars/blockly.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/blockly.git</developerConnection>
-        <tag>${project.artifactId}-${project.version}</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1173</upstream.version>
-        <upstream.url>http://${project.artifactId}.googlecode.com/svn/trunk</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}
-        </destDir>
+        <upstream.version>6909e38</upstream.version>
+        <upstream.commit>6909e38fc85f4cbd11486da194f7513d0749729d</upstream.commit>
+        <upstream.url>https://github.com/google/blockly/archive/${upstream.commit}.zip</upstream.url>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
                 <executions>
                     <execution>
-                        <phase>process-sources</phase>
-                        <id>svn</id>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
+                        <phase>process-resources</phase>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <target>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
+                                <move todir="${destDir}">
+                                    <fileset dir="${project.build.directory}/blockly-${upstream.commit}" includes="*_compressed.js,media/"/>
+                                </move>
+                            </target>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <executable>svn</executable>
-                    <arguments>
-                        <argument>export</argument>
-                        <argument>${upstream.url}</argument>
-                        <argument>${destDir}</argument>
-                        <argument>-r</argument>
-                        <argument>${upstream.version}</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <includes>
-                        <include>**/*_compressed.js</include>
-                        <include>**/media/*</include>
-                    </includes>
-                </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>2.5</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.2</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus-staging</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
