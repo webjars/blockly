@@ -7,7 +7,7 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>6909e38-SNAPSHOT</version>
+    <version>6909e38</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
@@ -33,7 +33,7 @@
         <url>http://github.com/webjars/blockly</url>
         <connection>scm:git:https://github.com/webjars/blockly.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/blockly.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>blockly-6909e38</tag>
     </scm>
 
     <properties>
@@ -62,7 +62,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/blockly-${upstream.commit}" includes="*_compressed.js,media/"/>
+                                    <fileset dir="${project.build.directory}/blockly-${upstream.commit}" includes="*_compressed.js,media/" />
                                 </move>
                             </target>
                         </configuration>
