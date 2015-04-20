@@ -8,7 +8,7 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>0-SNAPSHOT</version>
+    <version>b35c0fbfa2-1-SNAPSHOT</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
