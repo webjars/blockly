@@ -39,9 +39,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>b35c0fbfa2</upstream.version>
-        <upstream.commit>b35c0fbfa2e1ced31ae4d4450c101b66ca4918b9</upstream.commit>
-        <upstream.url>https://github.com/google/blockly/archive/${upstream.commit}.zip</upstream.url>
+        <upstream.version>36eb0787cc5</upstream.version>
+        <upstream.commit>36eb0787cc5dca38f54f10480c5b9efd1ab83229</upstream.commit>
+        <upstream.url>https://codeload.github.com/google/blockly/zip/${upstream.commit}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
 
@@ -58,7 +58,7 @@
                         <configuration>
                             <target>
                                 <echo message="download archive" />
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" verbose="true" usetimestamp="true"/>
                                 <echo message="unzip archive" />
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
