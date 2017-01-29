@@ -8,7 +8,7 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>36eb0787cc5-SNAPSHOT</version>
+    <version>36eb0787cc5</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
@@ -34,7 +34,7 @@
         <url>http://github.com/webjars/blockly</url>
         <connection>scm:git:https://github.com/webjars/blockly.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/blockly.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>blockly-36eb0787cc5</tag>
     </scm>
 
     <properties>
@@ -58,7 +58,7 @@
                         <configuration>
                             <target>
                                 <echo message="download archive" />
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" verbose="true" usetimestamp="true"/>
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" verbose="true" usetimestamp="true" />
                                 <echo message="unzip archive" />
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
