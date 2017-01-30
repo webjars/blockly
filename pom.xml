@@ -42,7 +42,7 @@
         <upstream.version>36eb0787cc5</upstream.version>
         <upstream.commit>36eb0787cc5dca38f54f10480c5b9efd1ab83229</upstream.commit>
         <upstream.url>https://codeload.github.com/google/blockly/zip/${upstream.commit}</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
     </properties>
 
     <build>
