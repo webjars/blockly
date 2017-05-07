@@ -8,19 +8,14 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>0-SNAPSHOT</version>
+    <version>1-e4bfd9a-SNAPSHOT</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
         <developer>
-            <id>jamesward</id>
-            <name>James Ward</name>
-            <email>james@jamesward.org</email>
-        </developer>
-        <developer>
-            <id>moandji.ezana</id>
-            <name>Moandji Ezana</name>
-            <email>mwanji@gmail.com</email>
+            <id>momega</id>
+            <name>Martin Vanek</name>
+            <email>momega23@gmail.com</email>
         </developer>
     </developers>
     <licenses>
@@ -39,8 +34,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>36eb0787cc5</upstream.version>
-        <upstream.commit>36eb0787cc5dca38f54f10480c5b9efd1ab83229</upstream.commit>
+        <upstream.version>e4bfd9a</upstream.version>
+        <upstream.commit>e4bfd9a12864e5dbdd3e72e367598800cc530569</upstream.commit>
         <upstream.url>https://codeload.github.com/google/blockly/zip/${upstream.commit}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
     </properties>
