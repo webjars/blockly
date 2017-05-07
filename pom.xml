@@ -8,19 +8,14 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>1-e4bfd9a-SNAPSHOT</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
         <developer>
-            <id>jamesward</id>
-            <name>James Ward</name>
-            <email>james@jamesward.org</email>
-        </developer>
-        <developer>
-            <id>moandji.ezana</id>
-            <name>Moandji Ezana</name>
-            <email>mwanji@gmail.com</email>
+            <id>momega</id>
+            <name>Martin Vanek</name>
+            <email>momega23@gmail.com</email>
         </developer>
     </developers>
     <licenses>
