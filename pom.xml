@@ -39,8 +39,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>36eb0787cc5</upstream.version>
-        <upstream.commit>36eb0787cc5dca38f54f10480c5b9efd1ab83229</upstream.commit>
+        <upstream.version>fdb2698d000</upstream.version>
+        <upstream.commit>fdb2698d0001c31e8834ee9cff53a0042f8bbcfa</upstream.commit>
         <upstream.url>https://codeload.github.com/google/blockly/zip/${upstream.commit}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
     </properties>
