@@ -58,7 +58,7 @@
                         <configuration>
                             <target>
                                 <echo message="download archive" />
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" verbose="true" usetimestamp="true"/>
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" verbose="true" usetimestamp="true" />
                                 <echo message="unzip archive" />
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
