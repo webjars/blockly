@@ -2,4 +2,4 @@ WebJar for Blockly
 
 More info: http://webjars.org
 
-Upstream: https://code.google.com/p/blockly/
+Upstream: https://github.com/google/blockly

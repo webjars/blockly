@@ -8,7 +8,7 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>0-SNAPSHOT</version>
+    <version>7679d22-SNAPSHOT</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
@@ -39,8 +39,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>fdb2698d000</upstream.version>
-        <upstream.commit>fdb2698d0001c31e8834ee9cff53a0042f8bbcfa</upstream.commit>
+        <upstream.version>7679d22</upstream.version>
+        <upstream.commit>7679d227df8f62a12316334ee708d4a9a800ef17</upstream.commit>
         <upstream.url>https://codeload.github.com/google/blockly/zip/${upstream.commit}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
     </properties>
