@@ -8,7 +8,7 @@
     </parent>
     <groupId>org.webjars</groupId>
     <artifactId>blockly</artifactId>
-    <version>7679d22-SNAPSHOT</version>
+    <version>7679d22</version>
     <name>Blockly</name>
     <description>WebJar for Blockly</description>
     <developers>
@@ -34,7 +34,7 @@
         <url>http://github.com/webjars/blockly</url>
         <connection>scm:git:https://github.com/webjars/blockly.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/blockly.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>blockly-7679d22</tag>
     </scm>
 
     <properties>
